@@ -8,8 +8,6 @@ import os
 import pandas as pd
 import plotparams
 
-#x = torch.rand(5, 3)
-#print(x)
 
 directory = os.path.dirname(os.path.realpath(__file__))
 boston = pd.read_csv('boston_corrected.csv')

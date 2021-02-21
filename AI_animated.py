@@ -76,6 +76,10 @@ for size in np.linspace(0.1,0.9,50):
     axs[2].grid(True)
     plt.close()
     
+    if size == 0.9:
+        plt.savefig(directory + "r variation with sample size")
+
+    
     
     camera.snap()
 
