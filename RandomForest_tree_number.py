@@ -83,4 +83,3 @@ plt.ylabel("r^2 over %s forests" %(n1))
 plt.grid()
 plt.savefig(directory + "\\forests\\Variation of accuracy with tree number")
 plt.show()
- 

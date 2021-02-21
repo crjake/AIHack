@@ -96,7 +96,7 @@ rf_random = RandomizedSearchCV(estimator = rf, param_distributions = random_grid
 
 rf_random.fit(var_train, price_train)
 
-# print(rf_random.best_params_)
+print(rf_random.best_params_)
     
 # for max_depth_i in max_depth:
 #     score = cross_val_score(ensemble.RandomForestRegressor(random_state= 42, max_depth = max_depth_i), var, price, cv= kf, scoring="neg_mean_squared_error")
