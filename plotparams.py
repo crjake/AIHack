@@ -1,3 +1,7 @@
+"""
+Plot parameters module
+"""
+
 import matplotlib.pyplot as plt
 
 params = {

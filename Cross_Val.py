@@ -1,5 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+"""
+Random Forest paramter optimisation
+General module to determine the optimum settings
+"""
 
 import numpy as np
 from scipy.optimize import curve_fit
@@ -140,6 +142,3 @@ base_accuracy = evaluate(base_model, var_train, price_train)
 best_random = rf_random.best_estimator_
 random_accuracy = evaluate(best_random, var_train, price_train)
 print('Improvement of {:0.2f}%.'.format( 100 * (random_accuracy - base_accuracy) / base_accuracy))
-
-    
-    

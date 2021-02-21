@@ -1,8 +1,11 @@
+"""
+Random Forest paramter optimisation
+Module to determine the optimum sample size
+"""
 import numpy as np
 from scipy.optimize import curve_fit
 from scipy.optimize import least_squares
 import matplotlib.pyplot as plt
-#import torch
 import os
 import pandas as pd
 import plotparams
@@ -13,7 +16,6 @@ from sklearn.metrics import r2_score
 
 directory = os.path.dirname(os.path.realpath(__file__))
 boston = pd.read_csv('boston_corrected.csv')
-#price = np.array(boston["MEDV"]).reshape(-1,1)
 price = boston["MEDV"]
 
 features = ["TOWNNO", "LON", "LAT", "CRIM", "ZN", "INDUS", 

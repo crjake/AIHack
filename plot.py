@@ -1,6 +1,9 @@
+"""
+Module to plot all data vs price 
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
-import torch
 import os
 import pandas as pd
 import plotparams

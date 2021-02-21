@@ -1,8 +1,13 @@
+"""
+Random Forest paramter optimisation
+Module to determine the optimum tree number
+"""
+
+
 import numpy as np
 from scipy.optimize import curve_fit
 from scipy.optimize import least_squares
 import matplotlib.pyplot as plt
-#import torch
 import os
 import pandas as pd
 import plotparams
