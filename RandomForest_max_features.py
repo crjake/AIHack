@@ -67,12 +67,13 @@ rs_std = [np.std(rs[i]) for i in range(n1)]
 rs2_means = [np.mean(rs2[i]) for i in range(n1)]
 rs2_std = [np.std(rs2[i]) for i in range(n1)]
 
-plt.errorbar(max_features_list, rs_means, yerr=rs_std)
-plt.errorbar(max_features_list, rs2_means, yerr=rs2_std)
+plt.errorbar(max_features_list, rs_means, yerr=rs_std, label="test data")
+plt.errorbar(max_features_list, rs2_means, yerr=rs2_std, label="training data")
 
 plt.title("Variation of accuracy with max features")
 plt.xlabel("max features")
 plt.ylabel("r^2 over %s forests" %(n1))
+plt.legend()
 plt.grid()
 plt.savefig(directory + "\\forests\\Variation of accuracy with max features")
 plt.show()

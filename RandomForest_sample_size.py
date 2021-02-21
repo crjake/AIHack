@@ -70,8 +70,8 @@ rs_std = [np.std(rs[i]) for i in range(n1)]
 rs2_means = [np.mean(rs2[i]) for i in range(n1)]
 rs2_std = [np.std(rs2[i]) for i in range(n1)]
 
-plt.errorbar(split_size_array, rs_means, yerr=rs_std)
-plt.errorbar(split_size_array, rs2_means, yerr=rs2_std)
+plt.errorbar(split_size_array, rs_means, yerr=rs_std, label="test data")
+plt.errorbar(split_size_array, rs2_means, yerr=rs2_std, label="training data")
 
 plt.title("Variation of accuracy with sample size")
 plt.xlabel("test size")
