@@ -36,6 +36,9 @@ regressor.fit(var_train, price_train)
 
 price_predict = regressor.predict(var_test)
 
+r = r2_score(price_test, price_predict)
+
+print(r)
 
 plt.plot(price_test, price_predict, "x")
 plt.plot([0,50] , [0, 50])
@@ -45,7 +48,8 @@ plt.ylabel("Predicted Price ($1,000s)")
 plt.grid()
 plt.xlim([0,50])
 plt.ylim([0,50])
-plt.show()
+plt.savefig(directory + "\\forests\\AI vs test data")
+#plt.show()
 
 plt.plot(price_train, regressor.predict(var_train), "x")
 plt.plot([0,50] , [0, 50])
@@ -54,20 +58,5 @@ plt.xlabel("Actual Price ($1,000s)")
 plt.ylabel("Predicted Price ($1,000s)")
 plt.xlim([0,50])
 plt.ylim([0,50])
-plt.show()
 plt.grid()
-
-
-    
-
-
-
-
-
-
-#n_estimators= 400, min_samples_split= 2, min_samples_leaf= 1, max_features= 'sqrt', max_depth= None, bootstrap= False
-
-
-
-
-#{'n_estimators': 400, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': None, 'bootstrap': False}
+#plt.show()

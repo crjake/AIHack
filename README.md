@@ -1,2 +1,2 @@
 # AI to predict Boston house prices
-<img src="./Animation.gif" width=1000>
+<img src="./Animation.gif" width=1000li>
